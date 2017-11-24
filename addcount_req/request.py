@@ -13,7 +13,7 @@ def start_request(args,unknown_args):
         conn.request(method="GET", url=url)
 
         response = conn.getresponse()
-        if response.reason == 200:
+        if response.reason == "OK":
             res = response.read()
             count = count + 1
             print "response time:" + repr(time.time()) + "\ncontent: " + res
